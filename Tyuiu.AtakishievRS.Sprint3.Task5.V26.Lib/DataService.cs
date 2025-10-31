@@ -5,16 +5,22 @@ namespace Tyuiu.AtakishievRS.Sprint3.Task5.V26.Lib
     {
         public double GetSumSumSeries(int x, int startValue1, int startValue2, int stopValue1, int stopValue2)
         {
-            double sumSeries = 0;
-            int i, j;
-            for (i = stopValue1; i <= stopValue1; i++)
+            double totalSum = 0;
+
+            for (int i = startValue1; i <= stopValue1; i++)
             {
-                for (j = stopValue2; j <= stopValue2; j++)
+                double innerSum = 0;
+
+                for (int k = startValue2; k <= stopValue2; k++)
                 {
-                    sumSeries = sumSeries + (Math.Pow(x, j) + Math.Sin(j));
+                    double term = Math.Pow(x, k) + Math.Sin(k);
+                    innerSum += term;
                 }
+
+                totalSum += innerSum;
             }
-            return Math.Round(sumSeries, 3);
+
+            return totalSum; 
         }
     }
 }
