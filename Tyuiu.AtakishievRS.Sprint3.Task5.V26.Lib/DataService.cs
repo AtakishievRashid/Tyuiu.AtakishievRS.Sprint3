@@ -20,7 +20,7 @@ namespace Tyuiu.AtakishievRS.Sprint3.Task5.V26.Lib
                 totalSum += innerSum;
             }
 
-            return totalSum; 
+            return Math.Round(totalSum, 3); 
         }
     }
 }
